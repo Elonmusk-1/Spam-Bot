@@ -425,7 +425,7 @@ async def f(event):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spam <count> <message to spam>\n\n.spam <count> <reply to a message>\n\nCount must be a integer."
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spam <count> <message to spam>\n\n.spam <count> <reply to a message>\n\nCount must be a integer.Example .spam 10 Where is @ElonMusk_1 "
     error = "Spam Module can only be used till 100 count. For bigger spams use BigSpam."
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
@@ -515,7 +515,7 @@ async def spam(e):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer.Example .bigspam 100 @ElonMusk_1 is Best "
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -724,11 +724,11 @@ async def _(e):
 async def ping(e):
     if e.sender_id in SMEX_USERS:
         start = datetime.now()
-        text = "Pong!"
+        text = "Pong! @ElonMusk_1 "
         event = await e.reply(text, parse_mode=None, link_preview=None)
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        await event.edit(f"🤖 𝗣𝗼𝗻𝗴!\n`{ms}` 𝗺𝘀\n {PM} ")
+        await event.edit(f"🤖 𝗣𝗼𝗻𝗴! @Elonmusk_1\n`{ms}` 𝗺𝘀\n {PM} ")
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -743,7 +743,7 @@ async def ping(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 async def restart(e):
     if e.sender_id in SMEX_USERS:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait till it reboots..."
+        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait sir @Elonmusk_1 till it reboots..."
         await e.reply(text, parse_mode=None, link_preview=None)
         try:
             await idk.disconnect()
@@ -801,7 +801,7 @@ async def restart(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.ping\n.restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bio\n.join\n.pjoin\n.leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.spam\n.delayspam\n.bigspam\n.raid\n.replyraid\n.dreplyraid\n\n\nFor more help regarding usage of plugins type plugins name"
+        text = "𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀\n\n𝙐𝙩𝙞𝙡𝙨 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.ping\n.restart\n\n𝙐𝙨𝙚𝙧𝙗𝙤𝙩 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.bio\n.join\n.pjoin\n.leave\n\n𝙎𝙥𝙖𝙢 𝘾𝙤𝙢𝙢𝙖𝙣𝙙:\n.spam\n.delayspam\n.bigspam\n.raid\n.replyraid\n.dreplyraid\n\n\nFor more help ask @ElonMusk_1"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
@@ -878,11 +878,11 @@ async def get_users(event):
     else:
         hell = await eor(event, "`processing...`")
     he_ll = event.pattern_match.group(1)
-    if he_ll == "@FIGHTERS_KA_ADDA":
+    if he_ll == "@ElonMusk_1":
         return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@FIGHTERS_KA_ADDA":
+    elif he_ll == "@ElonMusk_1":
         return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@FIGHTERS_KA_ADDA":
+    elif he_ll == "@ElonMusk_1":
         return await hell.edit("Restricted to invite users from there.")
     kraken = await get_chatinfo(event)
     chat = await event.get_chat()
@@ -921,7 +921,7 @@ text = """ """
 print(text)
 print("")
 print(
-    "CONGRATULATIONS 🥳🥳..UR Spam Bots Ready to use"
+    "CONGRATULATIONS @ElonMusk_1 🥳🥳..UR Spam Bots Ready to use"
 )
 if len(sys.argv) not in (1, 3, 4):
     try:
